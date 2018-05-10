@@ -1,3 +1,12 @@
 parameters:
     module:
         name: "example"
+database:
+        dsn: 'mysql:host=127.0.0.1;dbname=test'
+        user: root
+        password: ""
+services:
+    #databaseClient If I want to use container databaseClient as a service I have to register it here
+    databaseClient: DatabaseClient\App\Src\databaseClient
+    #If I want to use this container example as something what I want to call when I'm loading all containers I have to register it too
+    example: Example\App\src\example

@@ -1,7 +1,7 @@
 <?php
-//skript pro spousteni pouze gui
+//skript pro prepocet
 $container = require __DIR__ . '/../containers/appLoader/bootstrap.php';
 
-$allContainers = $container->getService('appLoader')->load($container);
+$allContainers = $container->getService('appLoader')->load();
 
-$allContainers['gui']->getService('guiLoader')->hello();
+$allContainers['example']->getService('example')->helloWorld();
