@@ -6,7 +6,7 @@ database:
         user: root
         password: ""
 services:
-    #databaseClient If I want to use container databaseClient as a service I have to register it here
-    databaseClient: DatabaseClient\App\Src\databaseClient
+    #databaseConnector If I want to use container databaseConnector as a service I have to register it here
+    databaseConnector: DatabaseClient\App\src\databaseConnector
     #If I want to use this container example as something what I want to call when I'm loading all containers I have to register it too
     example: Example\App\src\example

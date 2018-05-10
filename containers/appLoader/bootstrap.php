@@ -8,7 +8,6 @@ $configurator->setTimeZone('Europe/Prague');
 $configurator->setTempDirectory(__DIR__ . '/temp');
 $configurator->createRobotLoader()
     ->addDirectory(__DIR__ . '/app/')
-    ->addDirectory(__DIR__ . '/../gui/app')
     ->register();
 $configurator->addConfig(__DIR__ . '/app/config/config.neon');
 //$configurator->addConfig(__DIR__ . '/config/config.local.neon');

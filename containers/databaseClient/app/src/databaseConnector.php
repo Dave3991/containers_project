@@ -6,7 +6,7 @@
  * Time: 21:20
  */
 
-namespace DatabaseClient\App\Src;
+namespace DatabaseClient\App\src;
 
 
 use Nette\DI\Container;
