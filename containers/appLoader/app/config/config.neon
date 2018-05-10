@@ -1,0 +1,3 @@
+#registrovana service guiLoader, kvuli tomu abych ji mohl volat v index.php jako - $allContainers = $container->getService('appLoader')->load($container);
+services:
+    appLoader: AppLoader\App\Src\appLoader
