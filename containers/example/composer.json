@@ -3,8 +3,6 @@
 		"nette/bootstrap": "^2.4",
 		"nette/caching": "^2.5",
 		"nette/component-model": "^2.3",
-		"nette/database": "^2.4",
-		"nette/deprecated": "^2.3",
 		"nette/di": "^2.4",
 		"nette/finder": "^2.4",
 		"nette/forms": "^2.4",
@@ -18,12 +16,11 @@
 		"nette/security": "^2.4",
 		"nette/tokenizer": "^2.2",
 		"nette/utils": "^2.4",
-		"latte/latte": "^2.4",
 		"tracy/tracy": "^2.4",
 		"nette/tester": "^2.0@dev"
 	},
 	"autoload": {
-		"classmap": ["Nette/"]
+		"classmap": ["app/"]
 	},
 	"minimum-stability": "dev",
 	"extra": {

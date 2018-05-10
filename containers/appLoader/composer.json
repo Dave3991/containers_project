@@ -23,7 +23,7 @@
 		"nette/tester": "^2.0@dev"
 	},
 	"autoload": {
-		"classmap": ["Nette/"]
+		"classmap": ["app/"]
 	},
 	"minimum-stability": "dev",
 	"extra": {

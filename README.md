@@ -16,5 +16,6 @@ Main goal is to organize and keep everthing in "containers".
 
 - In this moment you have to run `composer update` in every "container".
 - just run ./www/index.php you should see "hello world" message from example container
+(if try it though web browser use this address  )
 
 
