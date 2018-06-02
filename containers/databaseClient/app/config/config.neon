@@ -1,3 +1,5 @@
 parameters:
     module:
         name: "databaseClient"
+services:
+   pdoContainerFactory: DatabaseClient\App\src\pdoContainerFactory

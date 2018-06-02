@@ -11,26 +11,29 @@ namespace DatabaseClient\App\src;
 
 use Nette\DI\Container;
 
-class databaseConnector extends \Nette\Database\Connection
+class pdoContainerFactory
 {
-    protected $dsn;
-    protected $user;
-    protected $password;
-    /**
-     * databaseConnector constructor.
-     */
-    public function __construct(Container $container)
+    protected $dsn = "";
+    protected $user = "";
+    protected $password = "";
+    protected $pdo = null;
+
+
+    public function exec(string $query):int{
+        return $this->pdo->exec($query);
+    }
+
+    public function createPdo(Container $container)
     {
         $containerParams = $container->getParameters();
         $this->dsn = $containerParams['database']['dsn'];
         $this->user = $containerParams['database']['user'];
         $this->password = $containerParams['database']['password'];
-        parent::__construct($this->dsn,$this->user,$this->password);
+//        $this->dsn = $dsn;
+//        $this->user = $user;
+//        $this->password = $password;
 
-    }
-
-    public function exec(string $query):int{
-        return $this->getPdo()->exec($query);
+        return new \Nette\Database\Connection($this->dsn,$this->user, $this->password);
     }
 
 }

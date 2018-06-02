@@ -21,11 +21,16 @@ class example
     public function __construct(Container $container)
     {
         $this->container = $container;
+
         //$databaseClient = new databaseConnector($this->container);
     }
 
-    public function helloWorld()
+    //$allContainers goes from index.php
+    public function helloWorld($allContainers)
     {
+
+        $pdo = $allContainers['databaseClient']->getBytype(\DatabaseClient\App\src\pdoContainerFactory::class)->createPdo($this->container);
+        dump($pdo);
         echo "hello world";
     }
 

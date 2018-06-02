@@ -1,12 +1,10 @@
 parameters:
     module:
         name: "example"
-database:
+    database:
         dsn: 'mysql:host=127.0.0.1;dbname=test'
         user: root
         password: ""
 services:
-    #databaseConnector If I want to use container databaseConnector as a service I have to register it here
-    databaseConnector: DatabaseClient\App\src\databaseConnector
     #If I want to use this container example as something what I want to call when I'm loading all containers I have to register it too
     example: Example\App\src\example
